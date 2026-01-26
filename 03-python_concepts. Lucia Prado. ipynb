@@ -1,0 +1,618 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9383bafa",
+   "metadata": {},
+   "source": [
+    "### Python Programming Concepts"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17df7d6e",
+   "metadata": {},
+   "source": [
+    "#### 1. Create a variable to store the value 500 for sales"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "a5f43c2f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "500"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sales = 500\n",
+    "sales "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6dc8b9ea",
+   "metadata": {},
+   "source": [
+    "#### 2. Create a variable to store several values:  \n",
+    "* sales: 500, 475, 625\n",
+    "* integers 1 - 9 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "902fe3bd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "625"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sales = [500, 475, 625]\n",
+    "sales.pop()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "bbc89976-1dc6-4515-8b0e-0e305b948f87",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 9, 8, 7, 6, 5, 4, 3, 2]"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "integers = list(range(10,1,-1))\n",
+    "integers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62e55953",
+   "metadata": {},
+   "source": [
+    "#### 3. Create a variable to store the names and email addresses for a number of customers\n",
+    "* John, john@some.com; Ann, ann@some.com"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "03f2b161",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{('Ann', 'ann@some.com'), ('John', 'john@some.com')}"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "customer = {(\"John\", \"john@some.com\"), (\"Ann\", \"ann@some.com\")}\n",
+    "customer"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d6b1e8c6",
+   "metadata": {},
+   "source": [
+    "#### 4. Use Python to generate a random value based on each of following:\n",
+    "1. between 0 and 1\n",
+    "2. the standard normal distribution (rounded to two decimal places)\n",
+    "3. a value between 1 and 10\n",
+    "4. either H or T"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "f004d7b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "a8efc6fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "0.5789595626357026"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.random()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "f20b6134-2d52-4465-a867-e7b69e9a9d94",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "-1.21"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "round(random.gauss(0,1),2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "3a150c3e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.randint(1,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "f80f4b3b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'H'"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "random.choice([\"H\", \"T\"])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bdb52b86",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7eddf06a",
+   "metadata": {},
+   "source": [
+    "#### 5. Use Python to determine your current working directory"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "d8f79474",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'/Users/luciaprado/Desktop/git---github--basic'"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import os\n",
+    "os.getcwd()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fc43ec50",
+   "metadata": {},
+   "source": [
+    "#### 6. Use Python to determine how many days until New Year's Day"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "13f630fe",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "340"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from datetime import date\n",
+    "\n",
+    "today = date.today()\n",
+    "next_new_year = date(today.year + 1, 1, 1)\n",
+    "\n",
+    "(next_new_year - today).days\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ba4ea92",
+   "metadata": {},
+   "source": [
+    "#### 7. Write a short program that displays the future value of 1,000 earning 5%  at the end of each year for the next 5 years"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "6fef4a8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Year 1: $1,050.00\n",
+      "Year 2: $1,102.50\n",
+      "Year 3: $1,157.62\n",
+      "Year 4: $1,215.51\n",
+      "Year 5: $1,276.28\n"
+     ]
+    }
+   ],
+   "source": [
+    "principal = 1000\n",
+    "rate = 0.05\n",
+    "\n",
+    "value = principal\n",
+    "for year in range(1, 6):\n",
+    "    value *= (1 + rate)\n",
+    "    print(f\"Year {year}: ${value:,.2f}\")\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "150201c8",
+   "metadata": {},
+   "source": [
+    "#### 8. Write a short program that prompts a user to enter a stock symbol and press enter. Add each symbol entered to a variable. The program should run until the user presses the enter key without entering anything (empty string) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "931a346f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "symbols = []\n",
+    "while True :\n",
+    "    s = input (\"Enter a stock symbol (press Enter to finish):\") strip()\n",
+    "    if s == \"\":\n",
+    "        symbols.append(s)\n",
+    "    symbols"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fc2a7592",
+   "metadata": {},
+   "source": [
+    "#### 9. Write the code necessary to calculate the sum of the square differences of a group of values : \n",
+    "58, 32, 37, 41, 36, 36, 54, 37, 25, 53\n",
+    "##### $\\Sigma $(${x}$ - $\\bar{x}$)$^2$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "13d9a6c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "values = [58,32,37,41,36,36,54,37,25,53]\n",
+    "mean = sum (values) / len (values)\n",
+    "ssd = sum (x - mean) ** 2 for x in values)\n",
+    "mean, ssd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6d6f2e64",
+   "metadata": {},
+   "source": [
+    "#### 10. Opening, reading and writing files"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f7fa569d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "filename = \"example.txt\"\n",
+    "#write\n",
+    "with open (filename, \"w\") as f:\n",
+    "    f.write(\"Hello\\n\")\n",
+    "    f.write(\"This is a file example.\\n\")\n",
+    "\n",
+    "\n",
+    "#read\n",
+    "with open (filename,l \"r\") as f:\n",
+    "    content = f.read()\n",
+    "contents"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "eec548d6",
+   "metadata": {},
+   "source": [
+    "#### 11. Create a function the will simulate rolling two die and return the value of each and and the sum "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bb115cdc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "def roll_two_dice():\n",
+    "    die1 = random.randint(1, 6)\n",
+    "    die2 = random.randint(1, 6)\n",
+    "    total = die1 + die2\n",
+    "    return die1, die2, total\n",
+    "\n",
+    "roll_two_dice()\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "21556d7f",
+   "metadata": {},
+   "source": [
+    "#### 12. Write the code needed to evaluate whether a value in a group of values is negative or postive and prints an approriate message, i.e. postive, negative \n",
+    "-1.59, 2.36, 1.69, 1.13, -0.91, 1.48, -0.34, 1.31, -0.74, 0.2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6c38ecb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = float (input(\"Enter a name : \"\")\n",
+    "                  if x > 0 :\n",
+    "                 print(\"positive\")\n",
+    "                 elif x <0:\n",
+    "                 print(\"negative\")\n",
+    "                 else:\n",
+    "                 print(\"zero\")\n",
+    "\n",
+    "                 \n",
+    "                "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aaefba17",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "60a910bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8cafe65c",
+   "metadata": {},
+   "source": [
+    "#### 14.  Complete the following:\n",
+    "1. Write a program that generates 500 random integers from 1 to n, for example, the first integer will be 1 the second will be 1 or 2, the fifth between 1 and 5, and so on.\n",
+    "2. The program should write each integer to a file \n",
+    "3. Once all integers are written close the file\n",
+    "\n",
+    "##### Part 2\n",
+    "1. Open and read the file into a list\n",
+    "2. Create a line plot of the data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1d4870ea-5d1a-4d92-96e1-e669eb4015b7",
+   "metadata": {},
+   "source": [
+    "#### 14.  Complete the following:\n",
+    "1. Write a program that generates 500 random integers from 1 to n, for example, the first integer will be 1 the second will be 1 or 2, the fifth between 1 and 5, and so on.\n",
+    "2. The program should write each integer to a file \n",
+    "3. Once all integers are written close the file\n",
+    "\n",
+    "##### Part 2\n",
+    "1. Open and read the file into a list\n",
+    "2. Create a line plot of the data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6b4180c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " ## Part 1\n",
+    "\n",
+    "import random\n",
+    "\n",
+    "filename = \"random_numbers.txt\"\n",
+    "\n",
+    "# open file for writing\n",
+    "f = open(filename, \"w\")\n",
+    "\n",
+    "# generate 500 random integers\n",
+    "for n in range(1, 501):\n",
+    "    value = random.randint(1, n)\n",
+    "    f.write(str(value) + \"\\n\")\n",
+    "\n",
+    "# close the file\n",
+    "f.close()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "adb6aa11",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##Part 2\n",
+    "numbers = []\n",
+    "\n",
+    "with open(\"random_numbers.txt\", \"r\") as f:\n",
+    "    for line in f:\n",
+    "        numbers.append(int(line.strip()))\n",
+    "\n",
+    "len(numbers), numbers[:10]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6745da79",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "21140445",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##line plot of the data \n",
+    "\n",
+    "import matplotlib.pyplot as plt\n",
+    "plt.plot(numbers)\n",
+    "plt.title(\"Random Integers from 1 to n\")\n",
+    "plt.xlabel(\"Index\")\n",
+    "plt.ylabel(\"Value\")\n",
+    "plt.show()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d546600",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
