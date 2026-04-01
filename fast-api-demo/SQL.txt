@@ -1,0 +1,25 @@
+-- The "Stock Records" Table
+
+-- To support your analysis, we only need this single table. This SQL script creates the table and ensures it can handle decimal numbers (for stock prices) and strings (for tickers).
+
+-- Create the main analysis table
+CREATE TABLE stock_records (
+  -- Unique ID for every entry
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+
+  -- The Stock Symbol (e.g., AAPL, TSLA)
+  ticker TEXT NOT NULL,
+
+  -- Price data (Numeric/Decimal is better than Float for money)
+  initial_price NUMERIC(12, 2) NOT NULL,
+  final_price NUMERIC(12, 2),
+
+  -- Calculated fields (Optional, but helpful)
+  percent_change NUMERIC(10, 4) GENERATED ALWAYS AS (
+    ((final_price - initial_price) / initial_price) * 100
+  ) STORED,
+
+  -- Metadata
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  user_id UUID -- Useful if you add a login later
+);
